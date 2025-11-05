@@ -1,0 +1,43 @@
+# Multiple-inheritance-code-on-finding-shape-of-a-polygon
+#include <iostream>
+using namespace std;
+
+class shape
+{
+    public: 
+      int display()
+      {
+          cout<<"information of rectangle shape "<<endl;
+          return 0;
+      }
+};
+
+class rectangle:public shape
+{
+    public:
+    int info()
+    {
+        cout<<"rectangle has 4 side"<<endl;
+        return 0;
+    }
+};
+
+class polygon: public rectangle 
+{
+    public:
+    int show()
+    {
+        cout<<"rectangle is polygon "<<endl;
+        return 0;
+    }
+};
+
+int main()
+{
+    polygon a;
+    a.display();
+    a.info();
+    a.show();
+
+    return 0;
+}
