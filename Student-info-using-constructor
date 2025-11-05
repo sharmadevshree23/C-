@@ -1,0 +1,52 @@
+# Student-info-using-constructor
+#include <iostream>
+#include <string>
+using namespace std;
+
+class info{
+    private:
+    int marks,age,rollNo;
+    string name;
+    
+    public:
+    info()
+    {
+        cout<<"enter your name: "<<endl;
+        cin>>name;
+        cout<<"enter your age: "<<endl;
+        cin>>age;
+        cout<<"enter your rollNo: "<<endl;
+        cin>>rollNo;
+        cout<<"enter your marks: "<<endl;
+        cin>>marks;
+    }
+    
+    info(int a, int b, int c, string d )
+    {
+    age=a;
+    rollNo=b;
+    marks=c;
+    name=d;
+    }
+    
+    void show()
+    {
+        
+        cout<<"the name is "<<name<<endl;
+        cout<<"the age is "<<age<<endl;
+        cout<<"the rollNo is "<<rollNo<<endl;
+        cout<<"the marks is "<<marks<<endl;
+        
+    }
+};
+
+int main()
+{
+    info a;
+    a.show();
+    
+    info b(20, 2, 100,"harsh");
+    b.show();
+
+    return 0;
+}
