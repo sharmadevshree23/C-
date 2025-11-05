@@ -1,0 +1,31 @@
+# Basic-code-for-understanding-of-function-overriding
+#include <iostream>
+#include <string>
+using namespace std;
+
+class base 
+{
+    public:
+    virtual void print()
+    {
+        cout<<"This is base class"<<endl;
+    }
+};
+
+class derived:public base
+{
+    public:
+    virtual void print()
+    {
+        cout<<"This is a derived class"<<endl;
+    }
+};
+
+int main()
+{
+    derived a;
+    a.print();
+    a.print();
+    
+    return 0;
+}
