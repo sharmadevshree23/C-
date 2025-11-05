@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class information
+{
+    private:
+    string name,addresss;
+    int age;
+    
+    public:
+    void show(string name)
+    {
+        cout<<"your name is "<<name<<endl;
+    }
+    void show(string name, int age)
+    {
+        cout<<"your name is "<<name<<"and age is "<<age<<endl;
+    }
+    void show(string name,int age,string address)
+    {
+        cout<<"your name is "<<name<<"and age is "<<age<<" and address is "<<address<<endl;
+    }
+};
+
+int main()
+{
+    information a;
+    a.show("devshree");
+    a.show("devshree",19);
+    a.show("devshree",19,"ujjain");
+
+    return 0;
+}
