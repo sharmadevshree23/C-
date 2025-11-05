@@ -1,0 +1,33 @@
+# Finding-area-of-circle-using-oops-in-c-
+#include <iostream>
+using namespace std;
+
+class Circle {
+private:
+    int radius;
+
+public:
+    void input() {
+        cout << "Enter the radius of the circle: ";
+        cin >> radius;
+    }
+
+    void area1() {
+        float area = 3.14 * radius * radius;
+        cout << "The area of the circle is: " << area << endl;
+    }
+
+    void circumference1() {
+        float circumference = 2 * 3.14 * radius;
+        cout << "The circumference of the circle is: " << circumference << endl;
+    }
+};
+
+int main() {
+    Circle a;
+    a.input();
+    a.area1();
+    a.circumference1();
+
+    return 0;
+}
