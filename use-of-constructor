@@ -1,0 +1,48 @@
+# use-of-constructor
+#include <iostream>
+#include <string>
+using namespace std;
+
+class info {
+    private:
+    int age;
+    string name;
+    
+    public:
+    
+      info()
+      {
+        cout<<"enter your age "<<endl;
+        cin>>age;
+        cout<<"enter your name "<<endl;
+        cin>>name;
+      }
+      info (int a,string n){
+          age =a;
+          name =n;
+      }
+      info(string d, int b){
+          age = b;
+          name =d;
+      }
+      void show()
+      {
+          cout<<"your age is "<<age<<endl;
+          cout<<"your name is "<<name<<endl;
+      }
+    
+};
+
+int main()
+{
+    info a;
+    a.show();
+    
+    info b(18,"devshree");
+    b.show();
+    
+   info c("Anamika",19);
+   c.show();
+
+    return 0;
+}
