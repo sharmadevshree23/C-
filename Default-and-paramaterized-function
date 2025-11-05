@@ -1,0 +1,46 @@
+# Default-and-paramaterized-function
+#include <iostream>
+#include <string>
+using namespace std;
+
+class rectangle
+{
+    private:
+    int length,width,area;
+    
+    public:
+    
+    rectangle()   //default function
+    {
+        cout<<"enter the length"<<endl;
+        cin>>length;
+        
+        cout<<"enter the width"<<endl;
+        cin>>width;
+    }
+    
+    rectangle(int a,int b) //paramaterized function
+    {
+        length=a;
+        width=b;
+    }
+
+    int calculateArea()
+    {
+        int area;
+        area = length*width;
+        cout<<"the area is: "<<area<<endl;
+        return 0;
+    }
+};
+
+int main()
+{
+    rectangle a;
+    a.calculateArea();
+    
+    rectangle b(23,1);
+    b.calculateArea();
+
+    return 0;
+}
