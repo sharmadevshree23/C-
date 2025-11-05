@@ -1,0 +1,38 @@
+# Function-overriding-code-on-area-of-rectangle-circle-square-
+#include <iostream>
+#include <string>
+using namespace std;
+
+class area
+{
+    private:
+    int area_of_square,area_of_circle,area_of_rectangle;
+    int a,l,b,r;
+    
+    public:
+    void show(int a)
+    {
+        area_of_square=a*a;
+        cout<<"area of square is "<<area_of_square<<endl;
+    }
+    void show(float r)
+    {
+        area_of_circle=3.14*r*r;
+        cout<<"area of circle is "<<area_of_circle<<endl;
+    }
+    void show(int l,int b)
+    {
+        area_of_rectangle=l*b;
+        cout<<"area of rectangle is "<<area_of_rectangle<<endl;
+    }
+};
+
+int main()
+{
+    area a;
+    a.show(3);
+    a.show(4);
+    a.show(2,3);
+
+    return 0;
+}
