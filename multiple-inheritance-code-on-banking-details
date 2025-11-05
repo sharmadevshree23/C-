@@ -1,0 +1,84 @@
+# multiple-inheritance-code-on-banking-details
+#include <iostream>
+#include <string>
+using namespace std;
+
+class employee
+{
+    private:
+    int account_no;
+    string name, designation;
+    
+   public:
+    void get_employeeName()
+    {
+        cout << "Enter the account no: " << endl;
+        cin >> account_no;  // fixed index from 10 to 0
+        cout << "Enter your name: " << endl;
+        cin >> name;
+        cout << "Enter your designation: " << endl;
+        cin >> designation;
+    }
+    
+    void display()
+    {
+       cout << "The account no of yours is " << account_no<< endl;  // fixed index
+       cout << "Your name is " << name << endl;
+       cout << "Your designation is " << designation << endl;  // added space
+    }
+};
+
+class salary : public employee
+{
+    private:
+    int pay, HRA, provisional_fund, total_salary;
+    
+    public:
+    void input()
+    {
+        cout << "Enter your expected pay: " << endl;
+        cin >> pay;
+        cout << "Enter your HRA: " << endl;
+        cin >> HRA;
+        cout << "Enter the provisional fund: " << endl;
+        cin >> provisional_fund;
+    }
+    
+    void calculate()
+    {
+        total_salary = pay + HRA + provisional_fund;
+        cout << "The total salary will be " << total_salary << endl;
+    }
+};
+
+class bank_credit : public salary
+{
+    private:
+    int IFSC_CODE;
+    string bank_name;
+    
+    public:
+    void bank_details()
+    {
+        cout << "Enter the bank name: " << endl;
+        cin >> bank_name;
+        cout << "Enter your IFSC code: " << endl;
+        cin >> IFSC_CODE;
+    }
+    
+    void display1()
+    {
+        cout << "We have taken all the essential information. The salary will be credited to your account very soon." << endl;
+    }
+};
+
+int main() {
+    bank_credit a;
+    a.get_employeeName();
+    a.display();
+    a.input();
+    a.calculate();
+    a.bank_details();
+    a.display1();
+    return 0;
+}
